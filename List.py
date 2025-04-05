@@ -88,11 +88,52 @@ matrix = [
 ]
 print(matrix[2][1])
 
+#sum of rows of this matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+for row in matrix:
+    print(f"sum of rows: {sum(row)}")
+
+#sum of column of this matrix
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
 
+for col in range(3):  # 0, 1, 2
+    print(f"col: {col}")
+
 for row in matrix:
-    print(f"sum of rows: {sum(row)}")
+    print(f"sdkfjsld: {row}")
+
+row2 = [1, 2, 3]
+print(f"ele: {row2[0]}")
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+for col in range(3):  # col = 0
+    col_sum = sum(row[col] for row in matrix)  # row = [1,2,3] row[0]
+    print(f"কলাম {col+1} এর যোগফল: {col_sum}")
+
+
+
+matrix2 = [
+    [21, 32, 43],
+    [24, 35, 46],
+    [27, 38, 49]
+]
+for col2 in range(len(matrix2[0])):
+    col_sum2 = sum( row2[col2] for row2 in matrix2)
+    print(f"sum of col{col2+1}: {col_sum2}")
+
+
+matrix = [[j for j in range(1, 4)] for i in range(3)]
+print(matrix)
+# [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
