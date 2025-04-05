@@ -21,7 +21,7 @@ print(numbers[::-1])
 nums = [5, 10, 15, 20, 25, 30, 35]
 print(nums[::2][::-1]) #***
 
-#List Comprehension
+#List Comprehension***
 squares = [x**2 for x in range(1, 6)]
 print(squares)
 
@@ -88,11 +88,32 @@ matrix = [
 ]
 print(matrix[2][1])
 
+matrix_3 = [
+    [3, 4, 5],
+    [5, 2, 9],
+    [7, 4, 3]
+]
+new_1d_matrix = [num for row in matrix for num in row]
+print(f"New 1D matrix: {new_1d_matrix}")
+
+
+#sum of all row in a matrix
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
-
 for row in matrix:
     print(f"sum of rows: {sum(row)}")
+
+
+#sum of all column 
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+for col in range(len(matrix[0])): #range(3)
+    col_sum = sum(row[col] for row in matrix)
+    print(f"col{col+1} sum: {col_sum}")
